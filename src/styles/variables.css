@@ -1,0 +1,11 @@
+:root {
+    /* Basic Colors */
+    --white: #fff;
+    --black: #222;
+    --blue: #5e94be;
+    --orange: orange;
+
+    /* Theme Colors */
+    --theme-color: var(--blue);
+    --accent-color: var(--orange);
+}
