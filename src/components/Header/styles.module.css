@@ -1,8 +1,5 @@
-@import '../../styles/variables.css';
-
 .header {
   background: var(--theme-color);
-  margin-bottom: 1.45rem;
 }
 
 .what {
