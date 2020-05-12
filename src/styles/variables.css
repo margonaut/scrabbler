@@ -8,4 +8,11 @@
     /* Theme Colors */
     --theme-color: var(--blue);
     --accent-color: var(--orange);
+
+    /* Responsive Breakpoints */
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 900px;
+    --breakpoint-xlg: 1200px;
 }
