@@ -6,12 +6,12 @@ import Image from '../components/Image';
 import WordSearchContainer from '../components/WordSearchContainer';
 import WordEvaluationDisplay from '../components/WordEvaluationDisplay';
 
-const SearchResults = () => {
-  console.log(location.state);
+const SearchResults = (props) => {
+  console.log(props);
   return (
     <Layout>
       <WordSearchContainer></WordSearchContainer>
-      <WordEvaluationDisplay></WordEvaluationDisplay>
+      <WordEvaluationDisplay word={props.location.state.word}></WordEvaluationDisplay>
     </Layout>
   );
 };
