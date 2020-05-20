@@ -4,29 +4,30 @@ import Image from '../components/Image';
 import Layout from '../components/Layout';
 import WordEvaluationDisplay from '../components/WordEvaluationDisplay';
 import WordSearchContainer from '../components/WordSearchContainer';
+import _ from 'lodash';
 import { navigate } from 'gatsby';
 
-const SearchResults = (props) => {
-  useEffect(() => {
-    if (!currentWord()) {
+class SearchResults extends React.Component {
+  componentDidMount() {
+    if (!this.currentWord()) {
       navigate('/');
     }
-  });
+  }
 
-  const currentWord = () => location.state && location.state.word;
+  currentWord() {
+    return _.get(this, 'props.location.state.word');
+  }
 
-  if (currentWord()) {
+  render() {
     return (
       <Layout>
         <WordSearchContainer></WordSearchContainer>
         <WordEvaluationDisplay
-          word={props.location.state.word}
+          word={this.currentWord()}
         ></WordEvaluationDisplay>
       </Layout>
     );
-  } else {
-    return <></>;
   }
-};
+}
 
 export default SearchResults;
