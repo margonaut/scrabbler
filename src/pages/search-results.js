@@ -1,19 +1,33 @@
-import React from 'react';
-import { Link } from 'gatsby';
+import React, { useEffect } from 'react';
 
-import Layout from '../components/Layout';
 import Image from '../components/Image';
-import WordSearchContainer from '../components/WordSearchContainer';
+import Layout from '../components/Layout';
 import WordEvaluationDisplay from '../components/WordEvaluationDisplay';
+import WordSearchContainer from '../components/WordSearchContainer';
+import _ from 'lodash';
+import { navigate } from 'gatsby';
 
-const SearchResults = () => {
-  console.log(location.state);
-  return (
-    <Layout>
-      <WordSearchContainer></WordSearchContainer>
-      <WordEvaluationDisplay></WordEvaluationDisplay>
-    </Layout>
-  );
-};
+class SearchResults extends React.Component {
+  componentDidMount() {
+    if (!this.currentWord()) {
+      navigate('/');
+    }
+  }
+
+  currentWord() {
+    return _.get(this, 'props.location.state.word');
+  }
+
+  render() {
+    return (
+      <Layout>
+        <WordSearchContainer></WordSearchContainer>
+        <WordEvaluationDisplay
+          word={this.currentWord()}
+        ></WordEvaluationDisplay>
+      </Layout>
+    );
+  }
+}
 
 export default SearchResults;
