@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 
+import Card from '../components/Card';
 import Layout from '../components/Layout';
 import WordEvaluationDisplay from '../components/WordEvaluationDisplay';
 import WordSearchContainer from '../components/WordSearchContainer';
@@ -19,7 +20,15 @@ const SearchResults = ({ search }) => {
   return (
     <Layout>
       <WordSearchContainer></WordSearchContainer>
-      <WordEvaluationDisplay word={word}></WordEvaluationDisplay>
+      <Card>
+        <WordEvaluationDisplay word={word}></WordEvaluationDisplay>
+      </Card>
+      <Card>
+        <p>I am other content</p>
+      </Card>
+      <Card>
+        <p>I am other content</p>
+      </Card>
     </Layout>
   );
 };

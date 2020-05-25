@@ -8,8 +8,8 @@ const WordSearchContainer = () => {
   const [word, setWord] = useState('');
 
   const handleInputChange = (event) => {
-    const word = _.get(event, 'target.value');
-    setWord(word);
+    const newWord = event.target.value;
+    setWord(newWord);
   };
 
   const searchLink = () => `/search-results?query=${word}`;
@@ -18,7 +18,6 @@ const WordSearchContainer = () => {
     event.preventDefault();
     navigate(searchLink());
   };
-
   return (
     <div className={styles.container}>
       <h2>scrabbler</h2>
