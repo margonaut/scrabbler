@@ -1,33 +1,27 @@
 import React, { useEffect } from 'react';
 
-import Image from '../components/Image';
 import Layout from '../components/Layout';
 import WordEvaluationDisplay from '../components/WordEvaluationDisplay';
 import WordSearchContainer from '../components/WordSearchContainer';
 import _ from 'lodash';
 import { navigate } from 'gatsby';
+import withLocation from '../components/utility/withLocation';
 
-class SearchResults extends React.Component {
-  componentDidMount() {
-    if (!this.currentWord()) {
+const SearchResults = ({ search }) => {
+  const word = _.get(search, 'query');
+
+  useEffect(() => {
+    if (!word) {
       navigate('/');
     }
-  }
+  }, [search.query]);
 
-  currentWord() {
-    return _.get(this, 'props.location.state.word');
-  }
+  return (
+    <Layout>
+      <WordSearchContainer></WordSearchContainer>
+      <WordEvaluationDisplay word={word}></WordEvaluationDisplay>
+    </Layout>
+  );
+};
 
-  render() {
-    return (
-      <Layout>
-        <WordSearchContainer></WordSearchContainer>
-        <WordEvaluationDisplay
-          word={this.currentWord()}
-        ></WordEvaluationDisplay>
-      </Layout>
-    );
-  }
-}
-
-export default SearchResults;
+export default withLocation(SearchResults);
