@@ -4,9 +4,11 @@ import Image from '../components/Image';
 import Layout from '../components/Layout';
 import { Link } from 'gatsby';
 import MainContent from '../components/MainContent';
+import RandomAd from '../components/RandomAd'
 import React from 'react';
 import Sidebar from '../components/Sidebar';
 import WordSearchContainer from '../components/WordSearchContainer';
+import tintinAd from '../images/tintinAd.jpg';
 
 const IndexPage = () => (
   <Layout>
@@ -24,6 +26,15 @@ const IndexPage = () => (
       <Sidebar>
         <Card sidebar={true} title={'Sidebar stuff'}>
           <p>This is the content</p>
+        </Card>
+        <Card hasColorBar={true} sidebar={true}>
+          <RandomAd>
+          </RandomAd>
+        </Card>
+        <Card sidebar={true}>
+          <a href="https://us-boutique.tintin.com">
+          <img src={tintinAd} alt="tintin ad" width="300" height="300" />
+          </a>
         </Card>
       </Sidebar>
     </BodyLayout>
