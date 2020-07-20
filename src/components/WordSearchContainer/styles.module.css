@@ -6,3 +6,21 @@
   justify-content: center;
   align-items: center;
 }
+
+form {
+  display: flex;
+}
+
+input {
+  border: none;
+}
+
+.submitButton {
+  background-color: var(--accent-color);
+  color: var(--white);
+  padding: 5px 10px;
+}
+
+.submitButton i {
+  font-size: 2rem;
+}

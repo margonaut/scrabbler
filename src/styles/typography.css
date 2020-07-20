@@ -1,15 +1,32 @@
 html {
-    font-size: 16px;
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Lato';
+}
+
+h1,
+h2,
+h3,
+h4,
+h4 {
+  font-family: 'Arvo';
+}
+
+.scrabble {
+  font-family: 'Overpass';
+  font-weight: 800;
 }
 
 @media screen and (min-width: 900px) {
-    html {
-        font-size: 18px;
-    }
+  html {
+    font-size: 18px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
-    html {
-        font-size: 20px;
-    }
+  html {
+    font-size: 20px;
+  }
 }
