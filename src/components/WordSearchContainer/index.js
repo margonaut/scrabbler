@@ -23,12 +23,15 @@ const WordSearchContainer = () => {
     <div className={styles.container}>
       <h2>scrabbler</h2>
       <form onSubmit={handleSubmit}>
-        <label>
-          Word:
-          <input onChange={handleInputChange} value={word} />
-        </label>
+        <input
+          placeholder={'Check my word'}
+          onChange={handleInputChange}
+          value={word}
+        />
+        <Link className={styles.submitButton} to={searchLink()}>
+          <i class="material-icons">search</i>
+        </Link>
       </form>
-      <Link to={searchLink()}>Go</Link>
     </div>
   );
 };
