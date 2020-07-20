@@ -29,7 +29,7 @@ const WordSearchContainer = () => {
           value={word}
         />
         <Link className={styles.submitButton} to={searchLink()}>
-          <i class="material-icons">search</i>
+          <i className="material-icons">search</i>
         </Link>
       </form>
     </div>
