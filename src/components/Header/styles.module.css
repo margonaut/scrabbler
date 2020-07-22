@@ -9,6 +9,7 @@
 .title {
   color: var(--white);
   margin-right: auto;
+  margin-bottom: 0px;
 }
 
 .menuLink {
@@ -17,7 +18,7 @@
 
 .menuIcon {
   color: var(--white);
-  
+  cursor: pointer;
 }
 
 .header a {

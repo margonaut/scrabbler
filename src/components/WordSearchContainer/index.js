@@ -20,18 +20,21 @@ const WordSearchContainer = () => {
   };
 
   return (
-    <div className={styles.container}>
-      <h2>scrabbler</h2>
-      <form onSubmit={handleSubmit}>
-        <input
-          placeholder={'Check my word'}
-          onChange={handleInputChange}
-          value={word}
-        />
-        <Link className={styles.submitButton} to={searchLink()}>
-          <i className="material-icons">search</i>
-        </Link>
-      </form>
+    <div className={styles.wordSearchArea}>
+      <div className={styles.container}>
+        <h2 className={styles.title}>Word Checker</h2>
+        <p className={styles.subtitle}>Enter a Word Up to 15 Letters Long</p>
+        <form onSubmit={handleSubmit}>
+          <input
+            placeholder={'Check my word'}
+            onChange={handleInputChange}
+            value={word}
+          />
+          <Link className={styles.submitButton} to={searchLink()}>
+            <i className="material-icons">search</i>
+          </Link>
+        </form>
+      </div>
     </div>
   );
 };
