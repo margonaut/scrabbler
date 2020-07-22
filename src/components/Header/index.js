@@ -5,18 +5,21 @@ import styles from './styles.module.css';
 
 const Header = ({ siteTitle }) => (
   <header className={styles.header}>
-    <i className="material-icons">menu</i>
-    <i className="material-icons">search</i>
-    <i className="material-icons">check</i>
-    <i className="material-icons">check_circle</i>
-    <i className="material-icons">check_circle_outline</i>
-    <div className={styles.what}>
-      <h1 style={{ margin: 0 }}>
-        <Link to="/" className={styles.title}>
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
+    {/* <i className="material-icons">menu</i>
+  <i className="material-icons">search</i>
+  <i className="material-icons">check</i>
+  <i className="material-icons">check_circle</i>
+  <i className="material-icons">check_circle_outline</i> */}
+    <h1 className={styles.title}>
+      <Link to="/">{siteTitle}</Link>
+    </h1>
+    <Link to="/" className={styles.menuLink}>
+      Word Lists
+    </Link>
+    <Link to="/" className={styles.menuLink}>
+      Dictionary
+    </Link>
+    <i className={`material-icons ${styles.menuIcon}`}>menu</i>
   </header>
 );
 

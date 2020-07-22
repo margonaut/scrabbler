@@ -20,6 +20,7 @@ export default function HTML(props) {
           rel="stylesheet"
         />
 
+
         {props.headComponents}
       </head>
       <body {...props.bodyAttributes}>
