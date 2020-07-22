@@ -1,18 +1,44 @@
-.container {
+.wordSearchArea {
   background: var(--theme-color);
   height: 20rem;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  max-width: 450px;
+}
+
 form {
   display: flex;
+  box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.3);
 }
 
 input {
   border: none;
+  padding: 0.75rem 0 0.75rem 1rem;
+}
+
+form,
+input {
+  width: 100%;
+}
+
+.title {
+  color: var(--white);
+  margin: 0 0 0.95rem 0;
+}
+
+.subtitle {
+  color: var(--white);
+  margin: 0 auto 0.5rem 0;
+  font-size: 0.85rem;
 }
 
 .submitButton {
@@ -23,4 +49,5 @@ input {
 
 .submitButton i {
   font-size: 2rem;
+  padding: 0.25rem 0 0 0;
 }
